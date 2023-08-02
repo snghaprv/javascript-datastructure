@@ -11,11 +11,6 @@ class DSU {
         }
     }
 
-    print(){
-        console.log(this.parent)
-        console.log(this.size)
-    }
-
   findUlitmateParent (node){
 
     if(this.parent[node]==node){
@@ -58,28 +53,4 @@ class DSU {
     }
   }
 }
-
-
-
-
-function example1() {
-    const dsu = new DSU(5);
-
-    dsu.unionByRank(1,2);
-    dsu.unionByRank(1,4);
-    dsu.unionByRank(3,5);
-
-    let count = 0;
-
-    for(let i=1; i<=5; i++){
-        if(dsu.parent[i] ==i){
-            count++
-        }
-    }
-
-    console.log("Number of connected components is", count);
-
-}
-
-example1()
 
