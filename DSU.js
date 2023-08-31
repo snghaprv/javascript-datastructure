@@ -27,7 +27,7 @@ class DSU {
 
     if(parentOfV ==parentOfU){
         return;
-    } else if(this.rank[parentOfU] > this.rank[parentOfV]){
+    } else if(this.rank[parentOfU] >= this.rank[parentOfV]){
         this.parent[parentOfV] =parentOfU;
     } else if (this.rank[parentOfU] < this.rank[parentOfV]) {
         this.parent[parentOfU] =parentOfV;
